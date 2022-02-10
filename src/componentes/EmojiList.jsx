@@ -11,7 +11,6 @@ export function EmojiList({ datos:items,itemsPerPage }) {
     const [itemOffset, setItemOffset] = useState(0);
 
     useEffect(() => {
-        console.log('lo que sea')
         const endOffset = itemOffset + itemsPerPage;
         setCurrentItems(items.slice(itemOffset, endOffset));
         setPageCount(Math.ceil(items.length / itemsPerPage));
